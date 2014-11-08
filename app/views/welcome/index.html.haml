@@ -1,0 +1,67 @@
+#container-content
+  %header
+    / Main content area
+    #logo
+      %h1
+        clean
+      %h1
+        Pixel
+      %h1.float
+        clean
+      %h1.float
+        Pixel
+
+    %ul#menu
+      %li 
+        %a{:href => "#", :id => "me", :class => "active"}cleanPixel
+      %li 
+        %a{:href => "#", :id => "projects"}projecten
+      %li 
+        %a{:href => "#", :id => "contact"}contact
+
+  #content-me
+    .floater-vertical
+      .floater-horizontal
+        %p.scale-text.styles
+          Ik ben een freelance 
+          %span
+            front-end developer 
+        %p.scale-text.styles
+          die zich focust op 
+          %span
+            User Experience
+          &
+          %span
+            User Interface
+
+        #font-metrics
+
+        %span
+          =image_tag("profile-me.png", :id => "img-me")
+          .bubble
+            %p
+              "Het leuke van front-end development is de constante stroom van nieuwe ontwikkelingen."
+
+  #content-projects
+    .floater-vertical
+      .floater-horizontal
+        .project-row
+          .project-block
+            %h2
+              Update.Me
+            %p
+              Update.Me is een webapp waarbij gebruikers release dates van verschillende media zoals films, cd's, series etc. kunnen beheren om zo op de hoogte te blijven.
+
+
+  #content-contact
+    .floater-vertical
+      .floater-horizontal
+        %p
+          Content mail
+    %footer
+      %p
+        Footertekst
+      = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+      = javascript_include_tag 'application', media: 'all', 'data-turbolinks-track' => true
+      = javascript_include_tag  "//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"
+      = javascript_include_tag  "//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"

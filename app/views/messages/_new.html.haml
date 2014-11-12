@@ -1,0 +1,12 @@
+
+= form_for @message do |f|
+  .field
+    %br/
+    = f.text_field :name, :placeholder => "Naam"
+  .field
+    %br/
+    = f.text_field :email, :placeholder => "Emailadres"
+  .field
+    %br/
+    = f.text_area :content, :rows => 5, :placeholder => "Uw bericht"
+  .actions= f.submit "Verstuur bericht", :id => "submit"

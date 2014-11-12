@@ -14,6 +14,15 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
+# Active_attr for contact form
+gem 'active_attr'
+
+# Check Email
+gem 'validates_email_format_of'
+
+# add Mandrill
+gem 'mandrill-api'
+
 # Neat
 gem 'neat'
 # Bourbon

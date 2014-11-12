@@ -1,24 +1,37 @@
 #container-content
   %header
-    / Main content area
-    #logo
-      %h1
-        clean
-      %h1
-        Pixel
-      %h1.float
-        clean
-      %h1.float
-        Pixel
+    .sticky.floater-horizontal
+      #logo
+        %h1
+          clean
+        %h1
+          Pixel
+        %h1.float
+          clean
+        %h1.float
+          Pixel
 
-    %ul#menu
-      %li 
-        %a{:href => "#", :id => "me", :class => "active"}cleanPixel
-      %li 
-        %a{:href => "#", :id => "projects"}projecten
-      %li 
-        %a{:href => "#", :id => "contact"}contact
+      %ul.menu
+        %li 
+          %a{:href => "#", :class => "me", :id => "active"}cleanPixel
+        %li 
+          %a{:href => "#", :class => "projects"}projecten
+        %li 
+          %a{:href => "#", :class => "contact"}contact
 
+    .scroll
+      .floater-horizontal
+        %ul.menu
+          %li 
+            %a{:href => "#", :class => "me", :id => "active"}cleanPixel
+          %li 
+            %a{:href => "#", :class => "projects"}projecten
+          %li 
+            %a{:href => "#", :class => "contact"}contact
+
+
+  - flash.each do |name, msg|
+    = content_tag :div, msg, class: name
   #content-me
     .floater-vertical
       .floater-horizontal
@@ -37,7 +50,7 @@
         #font-metrics
 
         %span
-          =image_tag("profile-me.png", :id => "img-me")
+          =image_tag("profile-me.png", :class => "img-me")
           .bubble
             %p
               "Het leuke van front-end development is de constante stroom van nieuwe ontwikkelingen."
@@ -47,20 +60,37 @@
       .floater-horizontal
         .project-row
           .project-block
-            %h2
-              Update.Me
-            %p
-              Update.Me is een webapp waarbij gebruikers release dates van verschillende media zoals films, cd's, series etc. kunnen beheren om zo op de hoogte te blijven.
-
-
+            =image_tag("movieseat-color.png")
+            .info
+              %p
+                %a{:href => "http://moviese.at"} Movieseat
+                Movieseat is een web-app waarmee gebruikers een lijst met films die zij graag willen zien kunnen opbouwen. Dit project is nog in ontwikkeling.
+          .project-block
+            =image_tag("appsynth-color.png")
+            .info
+              %p 
+                %a{:href => "http://appsynth.nl"} Appsynth
+                Appsynth is een community based platform waar kunstenaars mee kunnen doen aan kunstwedstrijden opgezet door sponsoren.
+            
   #content-contact
     .floater-vertical
-      .floater-horizontal
-        %p
-          Content mail
+      .floater-horizontal= render 'messages/new'        
+
+      #divider
+
     %footer
-      %p
-        Footertekst
+      .floater-horizontal
+        =image_tag("profile-me.png", :class => "img-me")
+        %p
+          Peter Boomsma is nu bezig met het afstuderen van de Noordelijke Hogeschool Leeuwarden, opleiding Communication & Multimedia Design. Tijdens deze studie heeft Peter veel codeer kennis opgedaan en toegepast. 
+          %br
+          %br
+          Zoals het creeren van web-apps in Ruby on Rails en Backbone. Ook heeft Peter natuurlijk uitgebreide kennis van HTML5, CSS3 en jQuery. 
+          %br
+          %br
+          U kunt nu ook gebruik maken van deze kennis en ervaring door met Peter zaken te doen.
+        %p
+
       = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
       = javascript_include_tag 'application', media: 'all', 'data-turbolinks-track' => true
       = javascript_include_tag  "//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"

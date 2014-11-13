@@ -42,16 +42,14 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 
 namespace :deploy do
   namespace :assets do
-    desc 'Run the precompile task locally and rsync with shared'
-    task :precompile, :roles => :web, :except => { :no_release => true } do
-      from = source.next_revision(current_revision)
-      if releases.length <= 1 || capture("cd #{latest_release} && #{source.local.log(from)} vendor/assets/ app/assets/ | wc -l").to_i > 0
-        %x{bundle exec rake assets:precompile}
-        %x{rsync --recursive --times --rsh=ssh --compress --human-readable --progress public/assets #{user}@#{host}:#{shared_path}}
-        %x{bundle exec rake assets:clean}
-      else
-        logger.info 'Skipping asset pre-compilation because there were no asset changes'
+   desc "Precompile assets locally and then rsync to deploy server"
+    task :precompile, :only => { :primary => true } do
+      run_locally "bundle exec rake assets:precompile"
+      servers = find_servers :roles => [:app], :except => { :no_release => true }
+      servers.each do |server|
+        run_locally "rsync -av ./public/#{assets_prefix}/ #{user}@#{server}:#{current_path}/public/#{assets_prefix}/"
       end
+      run_locally "rm -rf public/#{assets_prefix}"
     end
   end
-end 
+end

@@ -3,11 +3,11 @@ class Message
   include ActiveModel::Conversion
   extend ActiveModel::Naming
 
-  attr_accessor :name, :email, :content
+  attr_accessor :name, :email, :message
 
   validates_presence_of :name
   validates :email, :email_format => {:message => 'is not looking good'}
-  validates_length_of :content, :maximum => 500
+  validates_length_of :message, :maximum => 500
 
   def initialize(attributes = {})
     attributes.each do |name, value|

@@ -41,15 +41,14 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 # set :keep_releases, 5
 
 namespace :deploy do
-  namespace :assets do
-   desc "Precompile assets locally and then rsync to deploy server"
-    task :precompile, :only => { :primary => true } do
-      run_locally "bundle exec rake assets:precompile"
-      servers = find_servers :roles => [:app], :except => { :no_release => true }
-      servers.each do |server|
-        run_locally "rsync -av ./public/#{assets_prefix}/ #{user}@#{server}:#{current_path}/public/#{assets_prefix}/"
-      end
-      run_locally "rm -rf public/#{assets_prefix}"
+
+  desc 'Restart application'
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      execute :touch, release_path.join('tmp/restart.txt')
     end
   end
+
+  after :publishing, 'deploy:restart'
+  after :finishing, 'deploy:cleanup'
 end

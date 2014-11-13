@@ -3,7 +3,7 @@ class Messages < ActionMailer::Base
 
     def new_messages_email(message)
 
-    @message = Message.new
+    @message = message
     mail(to: 'peter@no-illusions.nl',
         subject: 'Iemand wilt contact met U')
     end

@@ -1,0 +1,434 @@
+/* Imports  */
+@import url(https://fonts.googleapis.com/css?family=Oleo+Script:700);
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:700);
+/* line 2, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 17, /home/alucardu/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, /home/alucardu/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, /home/alucardu/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, /home/alucardu/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, /home/alucardu/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, /home/alucardu/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, /home/alucardu/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, /home/alucardu/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, /home/alucardu/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* Mixings and variables */
+/* General styling */
+/* line 26, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+body, html {
+  height: 100%;
+  overflow-y: hidden;
+  background-color: #263a55;
+  background-image: -webkit-linear-gradient(#263a55, #9a9e82);
+  background-image: linear-gradient(#263a55, #9a9e82);
+}
+
+/* line 31, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+a {
+  color: white;
+}
+
+/* line 34, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#font-metrics {
+  position: absolute;
+  z-index: -1;
+  visibility: hidden;
+  left: 0;
+  top: 0;
+  white-space: no-wrap;
+  width: auto !important;
+}
+
+/* line 43, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+.floater-vertical {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 47, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+.floater-horizontal {
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* Header styling */
+/* line 53, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+/* line 57, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+header li {
+  list-style: none;
+}
+/* line 59, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+header li a {
+  font-family: Verdana, sans-serif;
+  text-decoration: none;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+/* line 63, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+header li a:hover {
+  padding-left: 15px;
+  color: #ff8400;
+}
+/* line 66, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+header li a:active {
+  color: #ff8400;
+}
+/* line 68, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+header li #active {
+  padding-left: 15px;
+  color: #ff8400;
+}
+/* line 72, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+header #logo {
+  cursor: pointer;
+  margin-top: 40px;
+  width: 230px;
+  float: left;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  text-shadow: 0px 0px 40px black;
+}
+/* line 79, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+header #logo .float {
+  text-shadow: 0px 0px 0px black;
+  position: absolute;
+}
+/* line 82, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+header #logo .float:last-child {
+  margin-left: 107.8px;
+}
+/* line 84, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+header #logo h1 {
+  float: left;
+  font-family: "Oleo Script", cursive;
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 0.583;
+}
+/* line 92, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+header #logo h1:last-child::first-letter {
+  color: #ff8400;
+}
+/* line 95, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+header .menu {
+  float: left;
+  margin-top: 15px;
+  color: #9c9f82;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.667;
+  width: 62px;
+  height: 51px;
+  padding: 0px;
+}
+/* line 106, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+header .scroll {
+  display: none;
+  background-color: #111111;
+  padding: 20px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+}
+/* line 113, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+header .scroll .menu {
+  width: 100%;
+  margin: 0 0 20px 0;
+  height: 0px;
+}
+/* line 117, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+header .scroll .menu li {
+  float: left;
+  margin-right: 20px;
+}
+
+/* Container for content */
+/* line 128, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#container-content {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+  height: 100%;
+  max-width: 100%;
+}
+/* line 15, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/bourbon/addons/_clearfix.scss */
+#container-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 133, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#container-content > div {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 100%;
+  float: none;
+  margin: 0 auto !important;
+}
+/* line 38, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/neat/grid/_span-columns.scss */
+#container-content > div:last-child {
+  margin-right: 0;
+}
+/* line 138, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#container-content #content-me {
+  height: 100%;
+  display: table;
+}
+/* line 140, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#container-content #content-me .floater-horizontal {
+  color: #9c9f82;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 0.778;
+}
+/* line 145, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#container-content #content-me .floater-horizontal p {
+  font-family: Lato;
+  width: 75%;
+  margin: 0 auto;
+}
+/* line 149, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#container-content #content-me .floater-horizontal p:nth-child(2) {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #9c9f82;
+}
+/* line 153, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#container-content #content-me .floater-horizontal > span {
+  text-align: center;
+  width: 100%;
+  float: left;
+}
+/* line 157, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#container-content #content-me .floater-horizontal > span .bubble {
+  display: none;
+  margin-top: -10px;
+  color: white;
+  background: #9c9f82;
+  margin: 0 auto;
+  width: 277px;
+  font-size: 1.5em;
+  line-height: 24px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  border-radius: 10px;
+}
+/* line 170, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#container-content #content-me .floater-horizontal > span .bubble:after {
+  content: "";
+  position: absolute;
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+  top: -10px;
+  left: 45%;
+  border: 10px solid;
+  border-color: transparent #9c9f82 #9c9f82 transparent;
+}
+/* line 178, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#container-content #content-me .floater-horizontal > span .bubble p {
+  width: 100%;
+}
+/* line 180, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#container-content #content-me .floater-horizontal img {
+  cursor: pointer;
+}
+/* line 182, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#container-content #content-me .floater-horizontal span {
+  color: #ff8400;
+}
+/* line 185, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#container-content #content-projects {
+  background-image: url(background_projects.jpg);
+  background-size: cover;
+  height: 100%;
+  display: table;
+}
+/* line 190, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#container-content #content-projects .project-row .project-block {
+  position: relative;
+  z-index: 999;
+  width: 48%;
+  float: left;
+  margin: 0px 4% 0 0;
+}
+/* line 196, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#container-content #content-projects .project-row .project-block:last-child {
+  margin: 0;
+}
+/* line 198, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#container-content #content-projects .project-row .project-block img {
+  width: 100%;
+}
+/* line 200, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#container-content #content-projects .project-row .project-block .info {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-color: rgba(17, 17, 17, 0.77);
+  color: white;
+}
+/* line 207, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#container-content #content-projects .project-row .project-block .info img {
+  position: absolute;
+  top: 0;
+}
+/* line 210, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#container-content #content-projects .project-row .project-block .info p {
+  position: absolute;
+  bottom: 0;
+  font-family: Verdana, sans-serif;
+  font-size: 14px;
+  color: white;
+  padding: 20px;
+}
+/* line 211, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#container-content #content-projects .project-row .project-block .info p a {
+  text-decoration: none;
+  width: 100%;
+  float: left;
+  font-size: 2em;
+  margin-bottom: 10px;
+  font-family: "Oleo Script", cursive;
+}
+/* line 225, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#container-content #content-contact {
+  position: relative;
+  height: 100%;
+  display: table;
+}
+/* line 229, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#container-content #content-contact form input, #container-content #content-contact form textarea {
+  padding: 20px;
+  width: 50%;
+  font-family: Verdana, sans-serif;
+}
+/* line 233, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#container-content #content-contact form #submit {
+  background: #263a55;
+  color: white;
+  border: none;
+}
+/* line 237, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+#container-content #content-contact #divider {
+  float: left;
+  width: 100%;
+  height: 140px;
+}
+
+/* Footer styling */
+/* line 244, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: white;
+  width: 100%;
+  background-color: #111111;
+  padding: 20px;
+  font-family: Lato, sans-serif;
+}
+/* line 253, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+footer img {
+  float: left;
+  margin: -20px 0;
+  width: 20%;
+}
+/* line 257, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/application.sass */
+footer p {
+  float: left;
+  width: 50%;
+  font-size: 0.85em;
+  border-right: 1px solid white;
+  padding-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 2, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/tablet.sass */
+  body {
+    background: yellow;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 2, /home/alucardu/sites/cleanpixel/app/assets/stylesheets/mobile.sass */
+  body {
+    background: green;
+  }
+}
